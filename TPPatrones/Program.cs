@@ -8,18 +8,18 @@ namespace TPPatrones {
             
             // Create ConcreteComponent and two Decorators
 
-            Mati c = new Mati();
-            ConcreteDecoratorA d1 = new ConcreteDecoratorA();
-            ConcreteDecoratorB d2 = new ConcreteDecoratorB();
+            Mati componente = new Mati();
+            DecoratorIng componenteIng = new DecoratorIng();
+            DecoratorGerente componenteGerente = new DecoratorGerente();
 
             // Link decorators
 
-            d1.SetComponent(c);
-            d2.SetComponent(d1);
+            componenteIng.SetComponent(componente);
+            componenteGerente.SetComponent(componenteIng);
 
-            //c.Operation();
-            //d1.Operation();
-            d2.Operation();
+            //componente.Operation();
+            //componenteIng.Operation();
+            componenteGerente.Operation();
 
             // Wait for user
 
@@ -61,7 +61,7 @@ namespace TPPatrones {
 
     /// The 'ConcreteDecoratorA' class
 
-    class ConcreteDecoratorA : Decorator {
+    class DecoratorIng : Decorator {
         
         public override void Operation() {
             base.Operation();
@@ -71,7 +71,7 @@ namespace TPPatrones {
 
     /// The 'ConcreteDecoratorB' class
 
-    class ConcreteDecoratorB : Decorator {
+    class DecoratorGerente : Decorator {
         
         public override void Operation() {
             base.Operation();
