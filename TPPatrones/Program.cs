@@ -12,13 +12,14 @@ namespace TPPatrones {
             DecoratorIng componenteIng = new DecoratorIng();
             DecoratorGerente componenteGerente = new DecoratorGerente();
 
-            // Link decorators
 
-            componenteIng.SetComponent(componente);
+            // Link decorators prueba
+
+            //componenteIng.SetComponent(componente);
             componenteGerente.SetComponent(componenteIng);
 
-            //componente.Operation();
-            //componenteIng.Operation();
+            componente.Operation();
+            componenteIng.Operation();
             componenteGerente.Operation();
 
             // Wait for user
